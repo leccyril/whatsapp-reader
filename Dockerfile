@@ -6,7 +6,7 @@ COPY . .
 
 RUN mkdir -p /root/.m2
 
-RUN ./mvnw deploy
+RUN ./mvnw install
 RUN cp ./target/*.jar ./whatsapp-reader.jar
 
 ######################## STAGE 2 ###########################
