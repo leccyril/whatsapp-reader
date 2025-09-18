@@ -22,7 +22,7 @@ public class SecurityConfiguration {
 						requests ->
 								requests.requestMatchers(HttpMethod.OPTIONS).permitAll()
 										.requestMatchers(HttpMethod.GET, "/api/v1/version").permitAll()
-										.requestMatchers(HttpMethod.GET, "/actuator/health").permitAll()
+										.requestMatchers(HttpMethod.GET, "/actuator/**").permitAll()
 										.requestMatchers(HttpMethod.POST, "/api/v1/merchants/token").permitAll()
 										.requestMatchers(HttpMethod.POST, "/api/v1/webhook").permitAll()
 										.anyRequest()
