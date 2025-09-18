@@ -25,6 +25,7 @@ public class SecurityConfiguration {
 										.requestMatchers(HttpMethod.GET, "/actuator/**").permitAll()
 										.requestMatchers(HttpMethod.POST, "/api/v1/merchants/token").permitAll()
 										.requestMatchers(HttpMethod.POST, "/api/v1/webhook").permitAll()
+										.requestMatchers(HttpMethod.GET, "/api/v1/webhook").permitAll()
 										.anyRequest()
 										.authenticated())
 				.formLogin(AbstractHttpConfigurer::disable)
